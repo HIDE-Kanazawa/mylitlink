@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 150 150">
+  <defs>
+    <pattern id="gold-pattern" width="50" height="50" patternUnits="userSpaceOnUse">
+      <rect width="50" height="50" fill="#d4af37" opacity="0.03"/>
+      <rect width="25" height="25" fill="#d4af37" opacity="0.05"/>
+      <rect x="25" y="25" width="25" height="25" fill="#d4af37" opacity="0.05"/>
+      <path d="M0,0 L50,50 M50,0 L0,50" stroke="#d4af37" stroke-width="0.5" opacity="0.08"/>
+    </pattern>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#gold-pattern)"/>
+</svg>

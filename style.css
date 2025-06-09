@@ -1,0 +1,276 @@
+:root {
+  /* Fresh Kanazawa Color Palette */
+  --bg-main: #f8f6ef;          /* 加賀友禅の白地を想起させるアイボリー */
+  --bg-pattern: #ece9dd;       /* アイボリーより少し濃いベージュで格子模様 */
+  --fg-main: #1e1e1c;          /* 黒ではなくチャコール */
+  --kanazawa-gold: #c9aa35;    /* 彩度を–10%したシャンパンゴールド */
+  --accent-blue: #4fa4cf;      /* 浅葱色：爽やかさ担当 */
+  --accent-green: #7fb18f;     /* 若草色：自然・兼六園のイメージ */
+  --card-bg: #ffffff;          /* カード用ホワイト */
+  --bg-pattern-svg: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNCIgaGVpZ2h0PSI0IiB2aWV3Qm94PSIwIDAgNCA0IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0xIDFIMHYxaDFWMXptMiAwSDJ2MWgxVjF6TTEgM0gwdjFoMVYzem0yIDBIMnYxaDFWM3oiIGZpbGw9IiNlY2U5ZGQiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==");
+  
+  /* Theme Variables */
+  --bg: var(--bg-main);
+  --fg: var(--fg-main);
+  --accent: var(--kanazawa-gold);
+  --card: var(--card-bg);
+  --card-border: var(--accent-blue);
+  --shadow: rgba(0, 0, 0, 0.06);
+  --transition: 200ms ease;
+}
+
+/* Fresh Kanazawa theme uses a light color scheme only */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", "Noto Serif JP", sans-serif;
+  color: var(--fg-main);
+  background-color: var(--bg-main);
+  background-image: var(--bg-pattern-svg);
+  background-size: 8px 8px;
+  background-attachment: fixed;
+  line-height: 1.5;
+  padding: 24px 16px;
+  transition: background-color 0.3s ease;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: var(--bg-pattern-svg);
+  background-repeat: repeat;
+  opacity: 0.12;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.container {
+  max-width: 480px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.profile {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.avatar-container {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 20px;
+  border: 3px solid var(--kanazawa-gold);
+  box-shadow: 0 3px 8px var(--shadow);
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.name {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--fg);
+  letter-spacing: 0.02em;
+}
+
+.bio {
+  font-size: 16px;
+  max-width: 100%;
+  margin-bottom: 20px;
+  color: var(--fg);
+  opacity: 0.92;
+  max-width: 360px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1.25rem;
+  margin-bottom: 16px;
+}
+
+.social-icon {
+  color: var(--ink-black);
+  font-size: 20px;
+  transition: color var(--transition), transform var(--transition);
+}
+
+.social-icon:hover {
+  color: var(--kanazawa-gold);
+  transform: scale(1.1);
+}
+
+.catchphrase {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 14px;
+  color: var(--fg);
+  opacity: 0.7;
+  margin-bottom: 24px;
+  letter-spacing: 0.05em;
+}
+
+.links {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.link-card {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  background-color: var(--card);
+  border-radius: 0.75rem;
+  text-decoration: none;
+  color: var(--fg);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(125, 125, 125, 0.1);
+  transition: background-color var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+
+.link-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: var(--card-border);
+  transition: background-color 0.2s ease;
+}
+
+.link-card:hover, .link-card:focus {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 10px var(--shadow);
+  background-color: rgba(201, 170, 53, 0.08);
+}
+
+.link-card:hover::before, .link-card:focus::before {
+  background-color: var(--kanazawa-gold);
+}
+
+.link-card:nth-child(even)::before {
+  background-color: var(--accent-blue);
+}
+
+.link-card:nth-child(odd)::before {
+  background-color: var(--accent-green);
+}
+
+.icon-wrapper {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background-color: var(--accent-blue);
+  margin-right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.icon-wrapper img {
+  width: 24px;
+  height: 24px;
+}
+
+.link-card .title {
+  font-weight: 600;
+}
+
+footer {
+  margin-top: 24px;
+  font-size: 14px;
+  opacity: 0.7;
+  text-align: center;
+  font-family: 'Inter', 'Hiragino Sans', sans-serif;
+}
+
+/* Copy URL Button */
+.copy-button {
+  margin-top: 4px;
+  padding: 8px 16px;
+  background: transparent;
+  border: 1px solid var(--kanazawa-gold);
+  border-radius: 20px;
+  cursor: pointer;
+  color: var(--kanazawa-gold);
+  font-size: 14px;
+  font-weight: 500;
+  position: relative;
+  transition: background-color var(--transition), transform var(--transition);
+}
+
+.copy-button:hover {
+  background-color: var(--kanazawa-gold);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.tooltip {
+  position: absolute;
+  background: var(--kanazawa-gold);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -30px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.tooltip.show {
+  opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  body {
+    padding: 40px 24px;
+  }
+  
+  .bio {
+    font-size: 18px;
+  }
+  
+  .catchphrase {
+    font-size: 15px;
+  }
+  
+  .social-icon {
+    font-size: 22px;
+  }
+}
+
+/* Utility classes */
+.nowrap {
+  white-space: nowrap;   /* 日本語でも強制的に改行禁止 */
+}

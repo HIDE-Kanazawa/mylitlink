@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create Avatar</title>
+  <style>
+    canvas { border: 1px solid #ccc; }
+  </style>
+</head>
+<body>
+  <canvas id="avatarCanvas" width="140" height="140"></canvas>
+  <script>
+    const canvas = document.getElementById('avatarCanvas');
+    const ctx = canvas.getContext('2d');
+    
+    // Fill background
+    ctx.fillStyle = '#e1e1e1';
+    ctx.fillRect(0, 0, 140, 140);
+    
+    // Draw a simple avatar shape
+    ctx.fillStyle = '#6366f1';
+    ctx.beginPath();
+    ctx.arc(70, 60, 40, 0, Math.PI * 2);
+    ctx.fill();
+    
+    // Draw body shape
+    ctx.fillStyle = '#6366f1';
+    ctx.beginPath();
+    ctx.ellipse(70, 150, 60, 50, 0, 0, Math.PI * 2);
+    ctx.fill();
+    
+    // Save as image
+    const link = document.createElement('a');
+    link.download = 'avatar.jpg';
+    link.href = canvas.toDataURL('image/jpeg');
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  </script>
+</body>
+</html>
