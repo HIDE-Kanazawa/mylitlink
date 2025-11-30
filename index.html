@@ -46,124 +46,136 @@
         <img class="avatar" src="assets/my.jpg" alt="Hide@Kanazawa" width="140" height="140" loading="lazy">
       </div>
       <h1 class="name">Hide@Kanazawa</h1>
-      <div class="role-badge">Digital Creator & Developer</div>
+      <div class="role-badge">AI Native IP Producer</div>
+      <p class="concept-text">
+        <span class="concept-highlight">AI Leverage</span> × <span class="concept-highlight">Human Value</span><br>
+        Creating a new ecosystem of digital creativity.
+      </p>
     </header>
 
     <!-- Projects Section -->
     <main>
-      <div class="section-header">Projects & Media</div>
+      <section class="ecosystem-board">
+        <div class="board-header">
+          <div class="label-chip">Ecosystem Diagram</div>
+          <h2>Auto-Localized Flow Map</h2>
+          <p>基盤からコンテンツ、SNS、顧客・収益までをひと目で俯瞰できる構造図。カードを小型化し、つながりを線で明示します。</p>
+          <div class="legend">
+            <span class="legend-chip person">個人</span>
+            <span class="legend-chip engine">基盤</span>
+            <span class="legend-chip website">公式サイト</span>
+            <span class="legend-chip content">コンテンツ</span>
+            <span class="legend-chip sns">SNS</span>
+            <span class="legend-chip global">市場</span>
+            <span class="legend-chip money">収益</span>
+            <span class="legend-chip future">計画中</span>
+          </div>
+        </div>
 
-      <div class="portfolio-grid">
+        <div class="diagram-grid">
+          <!-- Foundation -->
+          <div class="lane lane-foundation">
+            <div class="lane-title">Foundation</div>
+            <div class="node person" id="node-me">
+              <div class="node-title">Hide / Solo Biz</div>
+              <div class="node-sub">企画・演出・意思決定</div>
+            </div>
+            <div class="cluster" id="cluster-foundation">
+              <div class="cluster-label">Vibe Coding System</div>
+              <div class="node engine" id="node-ai">
+                <div class="node-title">AI Tools</div>
+                <div class="node-sub">Ideation / Prompt Ops</div>
+              </div>
+              <div class="node engine" id="node-auto">
+                <div class="node-title">Automation</div>
+                <div class="node-sub">自動生成・実装</div>
+              </div>
+              <div class="node engine" id="node-lang">
+                <div class="node-title">Multi-Language</div>
+                <div class="node-sub">JP / EN / FR / ZH / ES / PT / ID</div>
+              </div>
+            </div>
+          </div>
 
-        <!-- Project Shuka -->
-        <a href="https://project-shuka.com/" class="portfolio-item featured" target="_blank" rel="noopener"
-          style="--i: 1">
-          <div class="card-visual">
-            <div class="item-icon project-image">
-              <img src="assets/秀歌.webp" alt="秀歌 - Shūka">
-            </div>
-          </div>
-          <div class="card-content">
-            <div class="tags">
-              <span class="tag">Total Producing</span>
-              <span class="tag">Creative Direction</span>
-              <span class="tag">Web Design</span>
-            </div>
-            <h3>音楽アーティスト「秀歌 -Shūka」</h3>
-            <div class="card-footer">
-              <span class="visit-text">View Project</span>
-              <i class="fa-solid fa-arrow-right arrow-icon"></i>
-            </div>
-          </div>
-        </a>
+          <!-- Projects -->
+          <div class="lane lane-projects">
+            <div class="lane-title">Projects</div>
 
-        <!-- AI Blog -->
-        <a href="https://project-ai-blog.com/" class="portfolio-item" target="_blank" rel="noopener" style="--i: 2">
-          <div class="card-visual">
-            <div class="item-icon">
-              <i class="fa-solid fa-microchip"></i>
+            <div class="cluster" id="cluster-shuka">
+              <div class="cluster-label">Project 1: IP事業 秀歌</div>
+              <a class="node website" id="node-shuka-web" href="https://project-shuka.com/" target="_blank"
+                rel="noopener">
+                <div class="node-title">Shūka Official</div>
+                <div class="node-sub">Auto Localization Hub</div>
+              </a>
+              <a class="node content" id="node-music" href="https://www.youtube.com/@project-shuka" target="_blank"
+                rel="noopener">
+                <div class="node-title">Music / MV</div>
+                <div class="node-sub">YouTube / Shorts</div>
+              </a>
+              <div class="node future" id="node-manga">
+                <div class="node-title">Essay Manga</div>
+                <div class="node-sub">計画中・翻訳生成</div>
+              </div>
             </div>
-          </div>
-          <div class="card-content">
-            <div class="tags">
-              <span class="tag">AI Automation</span>
-              <span class="tag">Media Operation</span>
-              <span class="tag">Tech Analysis</span>
-            </div>
-            <h3>AI Tech Blog</h3>
-            <div class="card-footer">
-              <span class="visit-text">Read Blog</span>
-              <i class="fa-solid fa-arrow-right arrow-icon"></i>
-            </div>
-          </div>
-        </a>
 
-        <!-- Travel Log -->
-        <a href="https://travel-blog-bay-ten.vercel.app/" class="portfolio-item" target="_blank" rel="noopener"
-          style="--i: 3">
-          <div class="card-visual">
-            <div class="item-icon">
-              <i class="fa-solid fa-plane-departure"></i>
+            <div class="cluster" id="cluster-media">
+              <div class="cluster-label">Project 2: メディア事業 技術</div>
+              <a class="node content" id="node-blog" href="https://project-ai-blog.com/" target="_blank" rel="noopener">
+                <div class="node-title">AI Tech Blog</div>
+                <div class="node-sub">Process Economy</div>
+              </a>
+              <a class="node content" id="node-note" href="https://note.com/yamazaki2357" target="_blank"
+                rel="noopener">
+                <div class="node-title">Note / Essays</div>
+                <div class="node-sub">有料記事</div>
+              </a>
             </div>
-          </div>
-          <div class="card-content">
-            <div class="tags">
-              <span class="tag">Visual Storytelling</span>
-              <span class="tag">Gallery Design</span>
-              <span class="tag">Photography</span>
-            </div>
-            <h3>Travel Log</h3>
-            <div class="card-footer">
-              <span class="visit-text">Explore</span>
-              <i class="fa-solid fa-arrow-right arrow-icon"></i>
-            </div>
-          </div>
-        </a>
 
-        <!-- Youtube -->
-        <a href="https://www.youtube.com/@project-shuka" class="portfolio-item" target="_blank" rel="noopener"
-          style="--i: 4">
-          <div class="card-visual">
-            <div class="item-icon">
-              <i class="fa-brands fa-youtube"></i>
+            <div class="cluster" id="cluster-travel">
+              <div class="cluster-label">Project 3: アセット事業 旅</div>
+              <a class="node content" id="node-travel" href="https://travel-blog-bay-ten.vercel.app/" target="_blank"
+                rel="noopener">
+                <div class="node-title">Travel Log</div>
+                <div class="node-sub">Japan Travel</div>
+              </a>
             </div>
           </div>
-          <div class="card-content">
-            <div class="tags">
-              <span class="tag">Video Production</span>
-              <span class="tag">Sound Design</span>
-              <span class="tag">Content Creation</span>
-            </div>
-            <h3>YouTube Channel</h3>
-            <div class="card-footer">
-              <span class="visit-text">Watch Videos</span>
-              <i class="fa-solid fa-arrow-right arrow-icon"></i>
-            </div>
-          </div>
-        </a>
 
-        <!-- Note -->
-        <a href="https://note.com/yamazaki2357" class="portfolio-item" target="_blank" rel="noopener" style="--i: 5">
-          <div class="card-visual">
-            <div class="item-icon">
-              <i class="fa-solid fa-pen-nib"></i>
+          <!-- Distribution -->
+          <div class="lane lane-distribution">
+            <div class="lane-title">Distribution</div>
+            <div class="node sns" id="node-sns-visual">
+              <div class="node-title">Visual SNS</div>
+              <div class="icon-row">
+                <i class="fa-brands fa-youtube"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-tiktok"></i>
+              </div>
+            </div>
+            <div class="node sns" id="node-sns-comm">
+              <div class="node-title">Community</div>
+              <div class="icon-row">
+                <i class="fa-brands fa-x-twitter"></i>
+                <i class="fa-brands fa-facebook"></i>
+              </div>
             </div>
           </div>
-          <div class="card-content">
-            <div class="tags">
-              <span class="tag">Tech Philosophy</span>
-              <span class="tag">AI Literacy</span>
-              <span class="tag">Essay</span>
-            </div>
-            <h3>Note / Essays</h3>
-            <div class="card-footer">
-              <span class="visit-text">Read Articles</span>
-              <i class="fa-solid fa-arrow-right arrow-icon"></i>
-            </div>
-          </div>
-        </a>
 
-      </div>
+          <!-- Market -->
+          <div class="lane lane-market">
+            <div class="lane-title">Market / Output</div>
+            <div class="node global" id="node-global">
+              <div class="node-title">Global Users</div>
+              <div class="node-sub">7 Languages</div>
+            </div>
+            <div class="node money" id="node-revenue">
+              <div class="node-title">Revenue</div>
+              <div class="node-sub">Ads / Sales</div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer>
@@ -173,6 +185,7 @@
   </div>
 
   <script src="js/motion.js"></script>
+  <script src="js/ecosystem.js"></script>
 </body>
 
 </html>

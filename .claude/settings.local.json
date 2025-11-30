@@ -13,7 +13,9 @@
       "Bash(rm:*)",
       "Bash(tree:*)",
       "Bash(git restore:*)",
-      "Bash(sips:*)"
+      "Bash(sips:*)",
+      "Bash(lsof:*)",
+      "Bash(xargs kill:*)"
     ],
     "deny": []
   }
