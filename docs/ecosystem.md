@@ -18,7 +18,7 @@ graph TD
         Me(私・個人事業主):::person
         
         subgraph SYSTEM [Vibe Coding System]
-            AI(AI Tools):::engine
+            AI(<b>AI & Tools</b><br>Brain: GPT/Claude/Gemini<br>Media: Suno/Midjourney<br>Edit: Final Cut Pro<br>Dev: Antigravity):::engine
             Auto(自動化・実装):::engine
             Lang(<b>多言語化エンジン</b><br>7言語対応<br>JP/EN/FR/ZH/ES/PT/ID):::engine
         end
