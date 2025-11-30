@@ -201,11 +201,11 @@
           <p class="card__desc">実体験を資産化。AIには代替できない「リアル」の価値を活用</p>
           <div class="asset__box">
             <p class="asset__title">旅ログ — Japan Travel Log</p>
-            <p class="asset__desc">日本各地の高品質映像を撮影・蓄積し、MV素材として秀歌プロジェクトに供給</p>
+            <p class="asset__desc">Vibe Codingで構築・運用される旅メディア。日本文化に関心のある層を検索から集客し、秀歌の世界観へ繋げる</p>
             <div class="asset__features">
-              <span class="asset__feature">🎬 MV素材供給</span>
+              <span class="asset__feature">💻 Vibe Coding事例</span>
               <span class="asset__feature">💰 旅費経費化</span>
-              <span class="asset__feature">🌏 インバウンド</span>
+              <span class="asset__feature">🌏 インバウンド集客</span>
             </div>
           </div>
         </div>
@@ -301,105 +301,136 @@
         <div class="ecosystem-card ecosystem-card--resource">
           <div class="ecosystem-card__icon">🔄</div>
           <p class="ecosystem-card__title">素材の循環</p>
-          <p class="ecosystem-card__tagline">MVから複数SNSへ多重展開</p>
-          <div class="eco-branch">
-            <div class="eco-branch__row">
-              <span class="eco-branch__node">旅ログ 撮影</span>
-              <span class="eco-branch__arrow">→</span>
-              <span class="eco-branch__node">映像素材</span>
-              <span class="eco-branch__arrow">→</span>
-              <span class="eco-branch__node">Suno / AI Video</span>
-              <span class="eco-branch__arrow">→</span>
-              <span class="eco-branch__node eco-branch__node--hub">秀歌 MV</span>
+          <p class="ecosystem-card__tagline">AI生成素材をMVへ統合</p>
+
+          <div class="flow-diagram">
+            <!-- Step 1 -->
+            <div class="flow-node flow-node--input">
+              <span>🎵 Suno / 🎥 AI Video</span>
             </div>
-            <div class="eco-branch__row">
-              <span class="eco-branch__arrow">↘</span>
-              <span class="eco-branch__node eco-branch__node--sns">YouTube / Shorts</span>
-              <span class="eco-branch__arrow">•</span>
-              <span class="eco-branch__node eco-branch__node--sns">Instagram / Reels</span>
-              <span class="eco-branch__arrow">•</span>
-              <span class="eco-branch__node eco-branch__node--sns">TikTok</span>
-              <span class="eco-branch__arrow">•</span>
-              <span class="eco-branch__node eco-branch__node--sns">旅ログ / AIブログ</span>
+            <div class="flow-line"></div>
+
+            <!-- Step 2 -->
+            <div class="flow-node flow-node--process">
+              <span>⚙️ 編集・字幕付与</span>
+            </div>
+            <div class="flow-line"></div>
+
+            <!-- Step 3 -->
+            <div class="flow-node flow-node--hub">
+              <span>📺 秀歌 MV</span>
+            </div>
+            <div class="flow-line flow-line--spread"></div>
+
+            <!-- Step 4 -->
+            <div class="flow-row">
+              <span class="flow-node flow-node--sns">YouTube</span>
+              <span class="flow-node flow-node--sns">Insta</span>
+              <span class="flow-node flow-node--sns">TikTok</span>
+              <span class="flow-node flow-node--sns">Blog</span>
             </div>
           </div>
+
           <div class="ecosystem-steps">
-            <div class="ecosystem-step"><span class="ecosystem-step__num">1</span><span>旅先素材をAI映像＋Suno音源でMV化</span>
+            <div class="ecosystem-step">
+              <span class="ecosystem-step__num">1</span>
+              <span>Sunoで楽曲を、AI映像ツールでビデオ素材を生成</span>
             </div>
-            <div class="ecosystem-step"><span
-                class="ecosystem-step__num">2</span><span>MVをShorts/Reels/TikTokに再編集し多言語字幕を付与</span></div>
-            <div class="ecosystem-step"><span
-                class="ecosystem-step__num">3</span><span>旅ログ・AIブログの記事素材として再利用し、公式サイトへ導線追加</span></div>
+            <div class="ecosystem-step">
+              <span class="ecosystem-step__num">2</span>
+              <span>編集ソフトで統合し、7言語の翻訳字幕を付与してMV化</span>
+            </div>
+            <div class="ecosystem-step">
+              <span class="ecosystem-step__num">3</span>
+              <span>YouTubeで公開し、Shorts/TikTokへ切り抜き展開</span>
+            </div>
           </div>
-          <p class="ecosystem-card__desc">旅先で撮影した高品質映像を著作権クリアな素材としてMV化し、複数SNSと自社メディアへ横展開。1コンテンツで再生回数と滞在時間を最大化。</p>
+          <p class="ecosystem-card__desc">実写撮影を行わず、AIツールのみで完結する制作フロー。1つのMVから複数のSNSコンテンツを派生させる。</p>
         </div>
 
         <div class="ecosystem-card ecosystem-card--access">
           <div class="ecosystem-card__icon">🎯</div>
           <p class="ecosystem-card__title">アクセスの循環</p>
           <p class="ecosystem-card__tagline">「興味」別の導線でハブに合流</p>
-          <div class="eco-branch">
-            <div class="eco-branch__row">
-              <span class="eco-branch__node">AIブログ読者</span>
-              <span class="eco-branch__arrow">→</span>
-              <span class="eco-branch__node">制作事例紹介</span>
-              <span class="eco-branch__arrow">→</span>
-              <span class="eco-branch__node eco-branch__node--hub">秀歌公式</span>
+
+          <div class="flow-diagram">
+            <!-- Step 1 -->
+            <div class="flow-row">
+              <div class="flow-node flow-node--input" style="min-width: auto;">AIブログ</div>
+              <div class="flow-node flow-node--input" style="min-width: auto;">旅ログ</div>
+              <div class="flow-node flow-node--input" style="min-width: auto;">SNS</div>
             </div>
-            <div class="eco-branch__row">
-              <span class="eco-branch__node">旅ログ読者</span>
-              <span class="eco-branch__arrow">→</span>
-              <span class="eco-branch__node">和の世界観紹介</span>
-              <span class="eco-branch__arrow">→</span>
-              <span class="eco-branch__node eco-branch__node--hub">秀歌公式</span>
+            <div class="flow-line"></div>
+
+            <!-- Step 2 -->
+            <div class="flow-node flow-node--hub">
+              <span>🏯 秀歌 公式サイト</span>
             </div>
-            <div class="eco-branch__row">
-              <span class="eco-branch__node eco-branch__node--sns">YouTube / Shorts</span>
-              <span class="eco-branch__arrow">↔</span>
-              <span class="eco-branch__node eco-branch__node--hub">秀歌公式</span>
-              <span class="eco-branch__arrow">↔</span>
-              <span class="eco-branch__node eco-branch__node--sns">Instagram / X / TikTok</span>
-            </div>
-            <div class="eco-branch__row">
-              <span class="eco-branch__node">ポートフォリオ (本サイト)</span>
-              <span class="eco-branch__arrow">→</span>
-              <span class="eco-branch__node eco-branch__node--hub">秀歌公式</span>
-              <span class="eco-branch__arrow">→</span>
-              <span class="eco-branch__node eco-branch__node--sns">YouTube埋め込み視聴</span>
+            <div class="flow-line"></div>
+
+            <!-- Step 3 -->
+            <div class="flow-node flow-node--output">
+              <span>📺 YouTube埋め込み視聴</span>
             </div>
           </div>
+
           <div class="ecosystem-steps">
-            <div class="ecosystem-step"><span class="ecosystem-step__num">1</span><span>AIブログ・旅ログ・SNSで異なる興味層をキャッチ</span>
+            <div class="ecosystem-step">
+              <span class="ecosystem-step__num">1</span>
+              <span>技術（AI）や観光（旅）など、異なる入り口から興味層をキャッチ</span>
             </div>
-            <div class="ecosystem-step"><span class="ecosystem-step__num">2</span><span>秀歌公式サイトへ集約し、埋め込みMVで視聴を促進</span>
+            <div class="ecosystem-step">
+              <span class="ecosystem-step__num">2</span>
+              <span>公式サイトへ集約し、世界観を統一してファン化を促進</span>
             </div>
-            <div class="ecosystem-step"><span
-                class="ecosystem-step__num">3</span><span>公式サイトから各SNS/記事へ再循環させ、再生回数と滞在時間を積み上げ</span></div>
+            <div class="ecosystem-step">
+              <span class="ecosystem-step__num">3</span>
+              <span>サイト内の埋め込み動画で再生回数と滞在時間を最大化</span>
+            </div>
           </div>
           <p class="ecosystem-card__desc">
-            AI関心層と旅・和文化関心層の両方から公式サイトに集約し、埋め込みYouTubeで再生回数・視聴時間を獲得。SNSとサイトを双方向に循環させてチャンネルを成長させる。</p>
+            分散するSNSやブログのトラフィックを「公式サイト」という一点に集中させ、YouTubeチャンネルの評価（再生時間）に変換する。</p>
         </div>
 
         <div class="ecosystem-card ecosystem-card--knowledge">
           <div class="ecosystem-card__icon">📚</div>
           <p class="ecosystem-card__title">知識の循環</p>
           <p class="ecosystem-card__tagline">制作過程をノウハウ化し販売</p>
-          <div class="ecosystem-card__flow">
-            <span class="ecosystem-card__node">制作過程</span>
-            <span class="ecosystem-card__arrow">→</span>
-            <span class="ecosystem-card__node">ノウハウ化</span>
-            <span class="ecosystem-card__arrow">→</span>
-            <span class="ecosystem-card__node ecosystem-card__node--highlight">有料記事</span>
-          </div>
-          <div class="ecosystem-steps">
-            <div class="ecosystem-step"><span class="ecosystem-step__num">1</span><span>制作ログをAIブログに公開し、過程を透明化</span>
+
+          <div class="flow-diagram">
+            <!-- Step 1 -->
+            <div class="flow-node flow-node--input">
+              <span>📝 制作プロセス</span>
             </div>
-            <div class="ecosystem-step"><span
-                class="ecosystem-step__num">2</span><span>反応の高いテーマを深掘りし、Note有料記事や講座に展開</span></div>
-            <div class="ecosystem-step"><span
-                class="ecosystem-step__num">3</span><span>記事からMVや旅ログへ導線を戻し、IPへの関心を高める</span></div>
+            <div class="flow-line"></div>
+
+            <!-- Step 2 -->
+            <div class="flow-node flow-node--process">
+              <span>🧠 ノウハウ体系化</span>
+            </div>
+            <div class="flow-line"></div>
+
+            <!-- Step 3 -->
+            <div class="flow-node flow-node--output">
+              <span>💰 Note 有料記事</span>
+            </div>
           </div>
-          <p class="ecosystem-card__desc">「作ること」自体を収益に変換。学びながら稼ぐプロセス・エコノミー</p>
+
+          <div class="ecosystem-steps">
+            <div class="ecosystem-step">
+              <span class="ecosystem-step__num">1</span>
+              <span>制作中の試行錯誤やコードを記録し、AIブログで公開</span>
+            </div>
+            <div class="ecosystem-step">
+              <span class="ecosystem-step__num">2</span>
+              <span>反応の良いテーマを深掘りし、有料記事や教材としてパッケージ化</span>
+            </div>
+            <div class="ecosystem-step">
+              <span class="ecosystem-step__num">3</span>
+              <span>記事から再びMVや旅ログへ誘導し、新たなファンを獲得</span>
+            </div>
+          </div>
+          <p class="ecosystem-card__desc">「作ること」自体をコンテンツ化し収益に変える。学びながら稼ぐプロセス・エコノミーの実践。</p>
         </div>
       </div>
     </section>
