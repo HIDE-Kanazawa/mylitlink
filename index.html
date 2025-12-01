@@ -30,7 +30,10 @@
         <a href="#roadmap">計画</a>
       </nav>
       <a class="pill-button pill-button--filled site-header__cta" href="https://project-shuka.com/" target="_blank"
-        rel="noopener">音楽アーティスト-「秀歌」 公式サイト</a>
+        rel="noopener">音楽アーティスト-「秀歌」 公式サイト <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="3">
+          <path d="M7 17L17 7M17 7H7M17 7V17" />
+        </svg></a>
     </div>
   </header>
   <div class="container">
@@ -53,15 +56,7 @@
               </div>
             </div>
 
-            <div class="quick-links">
-              <a class="quick-link" href="#core">コア</a>
-              <a class="quick-link" href="#projects">プロジェクト</a>
-              <a class="quick-link" href="#engine">エンジン</a>
-              <a class="quick-link" href="#ecosystem">循環</a>
-              <a class="quick-link" href="#distribution">SNS流通</a>
-              <a class="quick-link" href="#hub">ハブ</a>
-              <a class="quick-link" href="#roadmap">ロードマップ</a>
-            </div>
+
 
 
 
@@ -120,25 +115,36 @@
           </p>
 
           <div class="core__contents">
-            <div class="core__content-item">
-              <div class="core__content-header">
-                <div class="core__content-header-left">
-                  <span class="core__content-icon">🎵</span>
-                  <span class="core__content-title">楽曲・MV</span>
+            <div class="core__content-item youtube-card">
+              <div class="youtube-card__header">
+                <img src="assets/秀歌.webp" alt="秀歌 - Shūka" class="youtube-card__avatar">
+                <div class="youtube-card__info">
+                  <div class="youtube-card__name-row">
+                    <span class="youtube-card__name">秀歌 - Shūka</span>
+                    <svg class="youtube-card__verified" viewBox="0 0 24 24" fill="currentColor">
+                      <path
+                        d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zM9.8 17.3l-4.2-4.1L7 11.8l2.8 2.7L17 7.4l1.4 1.4-8.6 8.5z" />
+                    </svg>
+                  </div>
+                  <p class="youtube-card__handle">@project-shuka</p>
+                  <div class="youtube-card__stats">
+                    <span>📺 YouTube活動</span> • <span>⏱ 週1 MV / 毎日Shorts</span>
+                  </div>
                 </div>
-                <a href="https://www.youtube.com/@project-shuka" class="sns-icon sns-icon--youtube" title="YouTube"
-                  target="_blank" rel="noopener">
-                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                    <path
-                      d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
-                  </svg>
-                </a>
               </div>
-              <p class="core__content-desc">Sunoで生成した楽曲と、AI映像ツールで制作したミュージックビデオ</p>
-              <div class="core__content-meta">
-                <span>📺 YouTube配信</span>
-                <span>⏱ 週1 MV / 毎日Shorts</span>
-              </div>
+
+              <p class="youtube-card__desc">Sunoで生成した楽曲と、AI映像ツールで制作したミュージックビデオを週1ペースで公開中。</p>
+
+              <a href="https://www.youtube.com/@project-shuka" class="youtube-card__btn" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+                  <path
+                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                </svg>
+                チャンネルを見る <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="3">
+                  <path d="M7 17L17 7M17 7H7M17 7V17" />
+                </svg>
+              </a>
             </div>
             <div class="core__content-item core__content-item--planned">
               <div class="core__content-header">
@@ -171,20 +177,20 @@
           <p class="card__label">メディア事業</p>
           <p class="card__desc">制作プロセス自体をコンテンツ化。学びながら稼ぐプロセス・エコノミー</p>
           <div class="media__items">
-            <div class="media__item">
+            <a href="https://project-ai-blog.com/" target="_blank" rel="noopener" class="media__item">
               <img class="media__thumb" src="assets/ai_blog_ogp.svg" alt="AI情報ブログ">
               <div class="media__item-body">
                 <p class="media__item-title">AI情報ブログ</p>
                 <p class="media__item-desc">毎日2本自動下書き → 修正 → 公開。技術導線として秀歌へ誘導</p>
               </div>
-            </div>
-            <div class="media__item">
+            </a>
+            <a href="https://note.com/yamazaki2357" target="_blank" rel="noopener" class="media__item">
               <img class="media__thumb" src="assets/note.png" alt="Note 有料記事">
               <div class="media__item-body">
                 <p class="media__item-title">Note 有料記事</p>
                 <p class="media__item-desc">制作ノウハウ・Vibe Coding術を商品化。知識を直接収益に変換</p>
               </div>
-            </div>
+            </a>
           </div>
         </div>
 
@@ -192,7 +198,7 @@
         <div class="card asset">
           <p class="card__label">アセット事業</p>
           <p class="card__desc">実体験を資産化。AIには代替できない「リアル」の価値を活用</p>
-          <div class="asset__box">
+          <a href="https://www.japan-travel-log.com/" target="_blank" rel="noopener" class="asset__box">
             <p class="asset__title">旅ログ — Japan Travel Log</p>
             <p class="asset__desc">Vibe Codingで構築・運用される旅メディア。日本文化に関心のある層を検索から集客し、秀歌の世界観へ繋げる</p>
             <div class="asset__features">
@@ -200,7 +206,7 @@
               <span class="asset__feature">💰 旅費経費化</span>
               <span class="asset__feature">🌏 インバウンド集客</span>
             </div>
-          </div>
+          </a>
         </div>
 
         <!-- Portfolio -->
@@ -549,7 +555,9 @@
       <div class="hero__actions">
         <a class="pill-button pill-button--filled" href="https://project-shuka.com/" target="_blank"
           rel="noopener">音楽アーティスト-「秀歌」
-          公式サイトへ</a>
+          公式サイトへ <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+            <path d="M7 17L17 7M17 7H7M17 7V17" />
+          </svg></a>
         <a class="pill-button pill-button--outline" href="#top">ページ上部へ戻る</a>
       </div>
     </div>

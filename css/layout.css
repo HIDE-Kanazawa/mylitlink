@@ -281,29 +281,7 @@
     color: var(--text-secondary);
 }
 
-/* Quick Links */
-.quick-links {
-    margin: 18px 0 10px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
 
-.quick-link {
-    padding: 8px 12px;
-    border-radius: var(--radius-full);
-    background: linear-gradient(120deg, rgba(246, 241, 230, 0.96), rgba(255, 255, 255, 0.96));
-    border: 1px solid rgba(198, 164, 82, 0.4);
-    font-size: 12px;
-    color: var(--text-secondary);
-    transition: var(--transition);
-}
-
-.quick-link:hover {
-    color: var(--accent-pink);
-    border-color: var(--accent-pink);
-    transform: translateY(-1px);
-}
 
 /* ========== Footer ========== */
 .footer {
