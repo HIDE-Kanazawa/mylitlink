@@ -419,6 +419,20 @@
     font-weight: 500;
 }
 
+@media (min-width: 768px) {
+    .lang__tags {
+        flex-wrap: nowrap;
+        gap: 4px;
+        overflow-x: auto;
+    }
+
+    .lang__tag {
+        padding: 3px 6px;
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+}
+
 /* ========== 3. Projects Grid ========== */
 .projects-section {
     margin-bottom: 16px;
@@ -829,25 +843,34 @@ a.asset__box:hover {
     background: linear-gradient(90deg, var(--accent-blue), var(--accent-gold));
 }
 
+.ecosystem-card__head {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 0 auto 14px;
+    flex-wrap: nowrap;
+}
+
 .ecosystem-card__icon {
-    font-size: 32px;
-    margin-bottom: 16px;
+    font-size: 28px;
     background: var(--bg-secondary);
-    width: 64px;
-    height: 64px;
+    width: 56px;
+    height: 56px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0;
+    flex-shrink: 0;
 }
 
 .ecosystem-card__title {
     font-size: 18px;
     font-weight: 800;
     color: var(--text-primary);
-    margin-bottom: 8px;
+    margin: 0;
+    line-height: 1.2;
 }
 
 .ecosystem-card__tagline {
