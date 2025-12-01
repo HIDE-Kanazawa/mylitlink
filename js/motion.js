@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Select all anchor links starting with #
-  const links = document.querySelectorAll('a[href^="#"]');
+  // Select all anchor links starting with #, excluding contact triggers
+  const links = document.querySelectorAll('a[href^="#"]:not(.js-contact-trigger)');
 
   links.forEach(link => {
     link.addEventListener('click', (e) => {

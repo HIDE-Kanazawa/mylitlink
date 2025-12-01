@@ -216,10 +216,56 @@
           <div class="portfolio__box">
             <p class="portfolio__title">hide-works.net</p>
             <p class="portfolio__desc">現在ご覧のポートフォリオ / 受託窓口 / 全活動のハブ</p>
+            <button id="contact-trigger" class="contact-btn js-contact-trigger">
+              <span class="contact-btn__icon">✉️</span>
+              お問い合わせ
+            </button>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- ... (rest of the sections) ... -->
+
+    <!-- ========== Contact Modal ========== -->
+    <dialog id="contact-modal" class="contact-modal">
+      <div class="contact-modal__inner">
+        <button id="contact-close" class="contact-modal__close" aria-label="閉じる">×</button>
+
+        <div class="contact-modal__header">
+          <h3 class="contact-modal__title">Contact</h3>
+          <p class="contact-modal__subtitle">お問い合わせ</p>
+        </div>
+
+        <div class="contact-modal__body">
+          <p class="contact-modal__desc">
+            制作のご依頼、コラボレーションのご相談など、<br>お気軽にご連絡ください。
+          </p>
+
+          <div class="contact-email-box">
+            <span id="contact-email-text" class="contact-email-text">info@hide-works.net</span>
+            <button id="contact-copy-btn" class="contact-copy-btn" title="メールアドレスをコピー">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              Copy
+            </button>
+          </div>
+
+          <div class="contact-actions">
+            <a href="mailto:info@hide-works.net" class="pill-button pill-button--filled contact-modal__action">
+              メールアプリを起動
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div id="contact-toast" class="contact-toast">Copied!</div>
+    </dialog>
 
     <!-- ========== 2. Production Engine ========== -->
     <section class="engine-section section-surface surface-blue" id="engine">
@@ -587,12 +633,14 @@
         <a href="https://www.youtube.com/@project-shuka" target="_blank" rel="noopener">YouTube チャンネル</a>
         <a href="https://project-ai-blog.com/" target="_blank" rel="noopener">AI情報ブログ</a>
         <a href="https://www.japan-travel-log.com/" target="_blank" rel="noopener">旅ログ</a>
+        <a href="#" class="js-contact-trigger">お問い合わせ</a>
       </div>
     </div>
     <div class="footer__bottom">
       © 2025 ひとり、プロダクション。 — ハイブリッド戦略: AI活用 × 人間の価値
     </div>
   </footer>
+  <script src="js/contact.js"></script>
   <script src="js/motion.js"></script>
 </body>
 
