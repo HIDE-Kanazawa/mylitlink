@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <g transform="translate(256 256)">
+    <!-- Three swirling segments representing the ecosystem cycle -->
+    <path d="M0 -140 A140 140 0 0 1 121.24 70 L80.83 46.67 A93.33 93.33 0 0 0 0 -93.33 Z" fill="#c6a452"/>
+    <path d="M121.24 70 A140 140 0 0 1 -121.24 70 L-80.83 46.67 A93.33 93.33 0 0 0 80.83 46.67 Z" fill="#c6a452" transform="rotate(120)"/>
+    <path d="M-121.24 70 A140 140 0 0 1 0 -140 L0 -93.33 A93.33 93.33 0 0 0 -80.83 46.67 Z" fill="#c6a452" transform="rotate(240)"/>
+    <!-- Center dot for the core -->
+    <circle cx="0" cy="0" r="40" fill="#c6a452"/>
+  </g>
+</svg>

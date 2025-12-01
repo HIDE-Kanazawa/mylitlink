@@ -208,3 +208,15 @@
     opacity: 1;
     transform: translateX(-50%) translateY(0);
 }
+
+/* Disabled State */
+.contact-btn:disabled,
+.contact-btn.is-disabled,
+a.js-contact-trigger.is-disabled {
+    background: #f0f0f0 !important;
+    color: #999 !important;
+    border-color: #ccc !important;
+    cursor: not-allowed;
+    box-shadow: none !important;
+    transform: none !important;
+}

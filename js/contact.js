@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     contactBtns.forEach(btn => {
         btn.addEventListener('click', (e) => {
             e.preventDefault();
+            if (btn.disabled || btn.classList.contains('is-disabled')) return;
             modal.showModal();
             modal.classList.add('is-open');
             document.body.style.overflow = 'hidden'; // Prevent background scrolling

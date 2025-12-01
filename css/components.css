@@ -225,6 +225,22 @@
     background: rgba(123, 157, 212, 0.2);
 }
 
+.sns-icon--tiktok {
+    background: rgba(51, 51, 51, 0.1);
+    color: var(--tiktok);
+}
+
+.sns-icon--tiktok:hover {
+    background: rgba(51, 51, 51, 0.18);
+}
+
+.sns-icon.is-disabled {
+    opacity: 0.4;
+    pointer-events: none;
+    filter: grayscale(100%);
+    cursor: default;
+}
+
 .sns-icons-row {
     display: flex;
     gap: 10px;
@@ -300,13 +316,18 @@
 }
 
 .cta-ribbon__title {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 800;
     letter-spacing: 0.5px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    margin-bottom: 8px;
 }
 
 .cta-ribbon__desc {
-    font-size: 13px;
-    color: rgba(255, 255, 255, 0.9);
-    max-width: 620px;
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 500;
+    line-height: 1.8;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    max-width: 640px;
 }

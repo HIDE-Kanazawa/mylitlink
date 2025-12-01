@@ -28,9 +28,10 @@
     font-family: var(--font-heading);
 }
 
-.brand-mark {
-    font-size: 18px;
-    color: var(--accent-gold);
+.brand-logo {
+    height: 24px;
+    width: auto;
+    display: block;
 }
 
 .site-nav {
