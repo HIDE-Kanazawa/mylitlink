@@ -547,7 +547,7 @@ a.media__item:hover {
 }
 
 .media__note-cover {
-    background-image: url('../assets/note_bg.jpg');
+    background-image: url('../assets/note_bg.webp');
 }
 
 /* Bodies with accent borders */
@@ -1001,6 +1001,24 @@ a.asset__box:hover .asset__newtab-icon {
     font-weight: 700;
     color: var(--text-primary);
     margin-bottom: 8px;
+}
+
+.hub__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 14px;
+    color: var(--accent-gold);
+    font-weight: 600;
+    text-decoration: none;
+    margin-bottom: 12px;
+    border-bottom: 1px solid transparent;
+    transition: var(--transition);
+}
+
+.hub__link:hover {
+    border-bottom-color: var(--accent-gold);
+    opacity: 0.8;
 }
 
 .hub__desc {
