@@ -554,26 +554,35 @@ a.media__item:hover {
     display: inline-flex;
     align-items: center;
     gap: 4px;
-    padding: 3px 8px;
+    padding: 4px 10px;
     border-radius: var(--radius-full);
-    border: 1px solid rgba(95, 111, 58, 0.45);
-    background: rgba(95, 111, 58, 0.12);
+    border: 1px solid var(--accent-green);
+    background: #fff;
     color: var(--accent-green);
     font-size: 10px;
     font-weight: 700;
-    letter-spacing: 0.01em;
+    letter-spacing: 0.02em;
     white-space: nowrap;
     flex-shrink: 0;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 2px 6px rgba(95, 111, 58, 0.15);
 }
 
 .media__newtab-icon {
     width: 10px;
     height: 10px;
+    transition: transform 0.3s ease;
 }
 
 a.media__item:hover .media__newtab {
-    border-color: var(--accent-green);
-    background: rgba(95, 111, 58, 0.18);
+    background: var(--accent-green);
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(95, 111, 58, 0.3);
+    transform: translateY(-1px);
+}
+
+a.media__item:hover .media__newtab-icon {
+    transform: translate(1px, -1px);
 }
 
 /* Featured Note Item (Vertical Card Structure) */
@@ -651,18 +660,99 @@ a.media__item:hover .media__newtab {
 }
 
 .media__item--note .media__newtab {
-    background: rgba(65, 201, 180, 0.1);
-    border-color: rgba(65, 201, 180, 0.3);
+    background: #fff;
+    border-color: #41C9B4;
     color: #2da896;
     margin: 0;
-    /* Reset margin */
     align-self: center;
-    /* Center vertically */
+    box-shadow: 0 2px 6px rgba(65, 201, 180, 0.15);
 }
 
 .media__item--note:hover .media__newtab {
-    background: rgba(65, 201, 180, 0.2);
+    background: #41C9B4;
+    color: #fff;
     border-color: #41C9B4;
+    box-shadow: 0 4px 12px rgba(65, 201, 180, 0.3);
+}
+
+/* Featured AI Item (Vertical Card Structure) */
+.media__item--ai {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    overflow: hidden;
+    gap: 0;
+    border: 1px solid var(--border-default);
+    border-left: none;
+    background: var(--bg-tertiary);
+}
+
+.media__item--ai:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    background: var(--bg-secondary);
+}
+
+.media__ai-cover {
+    height: 100px;
+    width: 100%;
+    background: linear-gradient(135deg, #00C6FF, #0072FF);
+    /* Placeholder Gradient */
+    background-size: cover;
+    background-position: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.media__ai-body {
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border-left: 3px solid var(--accent-blue);
+    flex: 1;
+}
+
+.media__ai-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.media__ai-title-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.media__item--ai .media__item-title {
+    font-size: 14px;
+    color: var(--text-primary);
+    margin: 0;
+    text-shadow: none;
+}
+
+.media__item--ai .media__item-desc {
+    color: var(--text-secondary);
+    text-shadow: none;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.media__item--ai .media__newtab {
+    background: #fff;
+    border-color: var(--accent-blue);
+    color: var(--accent-blue);
+    margin: 0;
+    align-self: center;
+    box-shadow: 0 2px 6px rgba(0, 114, 255, 0.15);
+}
+
+.media__item--ai:hover .media__newtab {
+    background: var(--accent-blue);
+    color: #fff;
+    border-color: var(--accent-blue);
+    box-shadow: 0 4px 12px rgba(0, 114, 255, 0.3);
 }
 
 /* Asset */
@@ -723,26 +813,114 @@ a.asset__box:hover {
     display: inline-flex;
     align-items: center;
     gap: 4px;
-    padding: 3px 8px;
+    padding: 4px 10px;
     border-radius: var(--radius-full);
-    border: 1px solid rgba(122, 93, 82, 0.45);
-    background: rgba(122, 93, 82, 0.12);
+    border: 1px solid var(--accent-purple);
+    background: #fff;
     color: var(--accent-purple);
     font-size: 10px;
     font-weight: 700;
-    letter-spacing: 0.01em;
+    letter-spacing: 0.02em;
     white-space: nowrap;
     flex-shrink: 0;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 2px 6px rgba(122, 93, 82, 0.15);
 }
 
 .asset__newtab-icon {
     width: 10px;
     height: 10px;
+    transition: transform 0.3s ease;
 }
 
 a.asset__box:hover .asset__newtab {
+    background: var(--accent-purple);
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(122, 93, 82, 0.3);
+    transform: translateY(-1px);
+}
+
+a.asset__box:hover .asset__newtab-icon {
+    transform: translate(1px, -1px);
+}
+
+/* Featured Travel Item (Vertical Card Structure) */
+.asset__box--travel {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    overflow: hidden;
+    gap: 0;
+    border: 1px solid var(--border-default);
+    border-left: none;
+    background: var(--bg-tertiary);
+}
+
+.asset__box--travel:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    background: var(--bg-secondary);
+}
+
+.asset__travel-cover {
+    height: 100px;
+    width: 100%;
+    background: linear-gradient(135deg, #9D50BB, #6E48AA);
+    /* Placeholder Gradient */
+    background-size: cover;
+    background-position: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.asset__travel-body {
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border-left: 3px solid var(--accent-purple);
+    flex: 1;
+}
+
+.asset__travel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.asset__travel-title-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.asset__box--travel .asset__title {
+    font-size: 14px;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.asset__box--travel .asset__desc {
+    color: var(--text-secondary);
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 4px;
+}
+
+.asset__box--travel .asset__newtab {
+    background: #fff;
     border-color: var(--accent-purple);
-    background: rgba(122, 93, 82, 0.18);
+    color: var(--accent-purple);
+    margin: 0;
+    align-self: center;
+    box-shadow: 0 2px 6px rgba(122, 93, 82, 0.15);
+}
+
+.asset__box--travel:hover .asset__newtab {
+    background: var(--accent-purple);
+    color: #fff;
+    border-color: var(--accent-purple);
+    box-shadow: 0 4px 12px rgba(122, 93, 82, 0.3);
 }
 
 .asset__features {
