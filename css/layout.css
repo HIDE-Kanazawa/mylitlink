@@ -40,7 +40,7 @@
     display: none;
     align-items: center;
     gap: 12px;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 600;
     color: var(--text-secondary);
     flex-wrap: wrap;
@@ -613,7 +613,7 @@
 }
 
 .header__label {
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 500;
     color: var(--text-muted);
     letter-spacing: 3px;
@@ -636,7 +636,7 @@
 }
 
 .header__subtitle {
-    font-size: clamp(10px, 3.2vw, 14px);
+    font-size: clamp(14px, 4vw, 18px);
     color: var(--text-secondary);
     margin-bottom: 24px;
     font-weight: 400;
@@ -660,7 +660,7 @@
 
 .hero__intro {
     margin-top: 12px;
-    font-size: 13px;
+    font-size: 15px;
     color: var(--text-secondary);
     line-height: 1.7;
     background: var(--accent-gold-bg);
@@ -698,7 +698,7 @@
     padding: 6px 10px;
     background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-light));
     color: #fff;
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 700;
     border-radius: var(--radius-full);
     box-shadow: var(--shadow-sm);
@@ -713,14 +713,14 @@
 }
 
 .hero__mini-title {
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 700;
     color: var(--text-primary);
     margin-bottom: 4px;
 }
 
 .hero__mini-desc {
-    font-size: 12px;
+    font-size: 13px;
     color: var(--text-secondary);
 }
 
@@ -792,7 +792,7 @@
 }
 
 .footer__brand-desc {
-    font-size: 12px;
+    font-size: 14px;
     color: var(--text-secondary);
     line-height: 1.7;
     max-width: 400px;
@@ -881,4 +881,30 @@
     .distribution__channel {
         min-width: 100%;
     }
+}/* Add disabled state for dropdown items */
+.external-dropdown__item.is-disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+    background: rgba(0, 0, 0, 0.03);
+    border-color: transparent;
+    box-shadow: none;
+}
+
+/* Divider for grouping */
+.external-dropdown__divider {
+    height: 1px;
+    background: rgba(198, 164, 82, 0.2);
+    margin: 4px 8px;
+}
+
+/* Category label inside dropdown */
+.external-dropdown__label {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--text-muted);
+    padding: 4px 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-top: 4px;
 }
