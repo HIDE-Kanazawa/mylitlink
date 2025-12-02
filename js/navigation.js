@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const externalToggle = document.querySelector('.external-dropdown__toggle');
     const externalLinks = document.querySelectorAll('.external-dropdown__menu a');
     const body = document.body;
+    let scrollPosition = 0;
 
     if (!hamburgerBtn || !siteNav) return;
 
@@ -18,6 +19,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Close menu when a link is clicked; smooth-scroll for in-page anchors after layout settles
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
+            // Only intervene if the mobile menu is active
+            if (!siteNav.classList.contains('is-active')) return;
+
             const href = link.getAttribute('href') || '';
             const isHashLink = href.startsWith('#');
 
@@ -25,17 +29,29 @@ document.addEventListener('DOMContentLoaded', () => {
                 const target = document.querySelector(href);
                 if (target) {
                     e.preventDefault();
+                    e.stopImmediatePropagation(); // Stop motion.js from running
+
+                    // Calculate target position BEFORE unlocking body
+                    // When body is fixed, window.scrollY is 0, so we must use the saved scrollPosition
+                    const header = document.querySelector('.site-header');
+                    const offset = header ? header.offsetHeight + 8 : 0;
+                    const targetY = target.getBoundingClientRect().top + scrollPosition - offset;
+
                     toggleMenu(false, true);
+
                     setTimeout(() => {
-                        smoothScrollTo(target, href);
+                        window.scrollTo({
+                            top: targetY,
+                            behavior: 'smooth'
+                        });
+                        history.replaceState(null, '', href);
                     }, 60);
                     return;
                 }
             }
 
-            if (siteNav.classList.contains('is-active')) {
-                toggleMenu(false, true);
-            }
+            // For external links or if target not found, just close the menu
+            toggleMenu(false, true);
         });
     });
 
@@ -76,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    let scrollPosition = 0;
+
 
     function closeExternalDropdown() {
         if (!externalDropdown) return;

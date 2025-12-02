@@ -197,16 +197,13 @@
 
         <!-- Main Visual Cover -->
         <div class="core__cover">
-          <img
-            src="assets/shuka_site_cover.webp"
-            srcset="assets/shuka_site_cover_900.webp 900w, assets/shuka_site_cover.webp 1200w"
-            sizes="(max-width: 600px) 100vw, (max-width: 1024px) 90vw, 1100px"
-            width="1200"
-            height="452"
-            loading="lazy"
-            decoding="async"
-            alt="Project SHUKA Official Website"
-            class="core__cover-img">
+          <picture>
+            <source media="(max-width: 600px)" srcset="assets/秀歌.webp">
+            <img src="assets/shuka_site_cover.webp"
+              srcset="assets/shuka_site_cover_900.webp 900w, assets/shuka_site_cover.webp 1200w"
+              sizes="(max-width: 600px) 100vw, (max-width: 1024px) 90vw, 1100px" width="1200" height="452"
+              loading="lazy" decoding="async" alt="Project SHUKA Official Website" class="core__cover-img">
+          </picture>
           <div class="core__cover-overlay">
             <div class="core__cover-content">
               <p class="core__label">AI Artist Production</p>
@@ -607,7 +604,8 @@
             AI情報ブログで技術に興味を持った人、日本観光の旅ログで和の世界観に触れた人、それぞれが公式サイトへ流入。埋め込みYouTube動画で再生回数・再生時間を獲得し、チャンネルを育てる導線設計。</p>
           <p class="hub__note">公式サイト内：多言語切替 / MV埋め込み / 多言語字幕 / SNSリンク。ポートフォリオ（本サイト）からも公式サイトへ横断リンク。</p>
           <div class="hero__actions">
-            <a class="pill-button pill-button--outline" href="https://project-shuka.com/" target="_blank" rel="noopener">
+            <a class="pill-button pill-button--outline" href="https://project-shuka.com/" target="_blank"
+              rel="noopener">
               公式サイトを見る
             </a>
           </div>
@@ -750,8 +748,8 @@
     </div>
   </footer>
   <script src="js/contact.js"></script>
-  <script src="js/motion.js"></script>
   <script src="js/navigation.js"></script>
+  <script src="js/motion.js"></script>
 </body>
 
 </html>
