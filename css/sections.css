@@ -1010,8 +1010,8 @@ a.asset__item:hover {
 }
 
 .hub {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 24px;
     background: linear-gradient(135deg, var(--accent-gold-bg), var(--bg-secondary));
     border: 1px solid var(--accent-gold);
@@ -1020,10 +1020,31 @@ a.asset__item:hover {
     box-shadow: var(--shadow-lg);
 }
 
-@media (min-width: 900px) {
-    .hub {
-        grid-template-columns: 1fr 1fr;
-        align-items: start;
+/* Flow Arrow */
+.hub-flow-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-gold);
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-6px);
+    }
+
+    60% {
+        transform: translateY(-3px);
     }
 }
 
@@ -1161,7 +1182,7 @@ a.asset__item:hover {
     background: #fff;
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-lg);
-    padding: 32px 24px;
+    padding: 32px 20px;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -1172,7 +1193,10 @@ a.asset__item:hover {
     transition: var(--transition);
 }
 
-
+.ecosystem-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
 
 .ecosystem-card::before {
     content: '';
@@ -1196,25 +1220,25 @@ a.asset__item:hover {
 }
 
 .ecosystem-card__head {
-    display: inline-flex;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 10px;
-    margin: 0 auto 14px;
-    flex-wrap: nowrap;
+    gap: 12px;
+    margin-bottom: 16px;
 }
 
 .ecosystem-card__icon {
-    font-size: 28px;
+    font-size: 32px;
     background: var(--bg-secondary);
-    width: 56px;
-    height: 56px;
-    display: inline-flex;
+    width: 64px;
+    height: 64px;
+    display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
     margin: 0;
     flex-shrink: 0;
+    border: 1px solid var(--border-subtle);
 }
 
 .ecosystem-card__title {
@@ -1226,16 +1250,17 @@ a.asset__item:hover {
 }
 
 .ecosystem-card__tagline {
-    font-size: 12px;
-    color: var(--accent-gold);
-    font-weight: 700;
+    font-size: 13px;
+    color: var(--text-secondary);
+    font-weight: 600;
     margin-bottom: 24px;
-    letter-spacing: 0.05em;
-    background: var(--accent-gold-bg);
+    letter-spacing: 0.02em;
+    background: var(--bg-tertiary);
     display: inline-block;
-    padding: 4px 12px;
+    padding: 6px 16px;
     border-radius: var(--radius-full);
     align-self: center;
+    border: 1px solid var(--border-subtle);
 }
 
 /* ========== Visual Flow Diagram ========== */
@@ -1243,97 +1268,100 @@ a.asset__item:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12px;
-    margin: 24px 0;
+    gap: 16px;
+    margin: 12px 0 32px;
     position: relative;
     z-index: 1;
     width: 100%;
+    flex-grow: 1;
 }
 
 .flow-node {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
-    padding: 10px 20px;
-    border-radius: var(--radius-full);
+    padding: 12px 20px;
+    border-radius: 12px;
     background: #fff;
     border: 1px solid var(--border-default);
     color: var(--text-primary);
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 600;
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     transition: var(--transition);
     position: relative;
-    min-width: 140px;
+    min-width: 120px;
     text-align: center;
 }
 
-
-
 /* Node Types */
 .flow-node--input {
-    background: var(--bg-secondary);
-    border-color: var(--border-subtle);
+    background: #f8f9fa;
+    border-color: #e9ecef;
     color: var(--text-secondary);
 }
 
 .flow-node--process {
     background: #fff;
-    border-style: dashed;
+    border: 1px dashed var(--border-default);
     color: var(--text-muted);
 }
 
 .flow-node--hub {
-    background: linear-gradient(135deg, var(--accent-gold), var(--accent-gold-light));
+    background: linear-gradient(135deg, #c6a452 0%, #eacda3 100%);
     color: #fff;
     border: none;
     font-weight: 700;
-    font-size: 14px;
-    padding: 12px 24px;
-    box-shadow: 0 4px 12px rgba(198, 164, 82, 0.3);
+    font-size: 15px;
+    padding: 14px 28px;
+    box-shadow: 0 8px 20px rgba(198, 164, 82, 0.25);
+    transform: scale(1.05);
 }
 
 .flow-node--output {
-    background: var(--bg-tertiary);
+    background: #f3f0ff;
     color: var(--accent-purple);
-    border-color: var(--accent-purple);
+    border-color: rgba(169, 142, 212, 0.3);
 }
 
 .flow-node--sns {
-    font-size: 11px;
-    padding: 6px 12px;
+    font-size: 12px;
+    padding: 8px 14px;
     min-width: auto;
     background: #fff;
+    border-radius: 20px;
 }
 
 /* Connectors */
 .flow-line {
     width: 2px;
-    height: 20px;
-    background: var(--border-subtle);
+    height: 24px;
+    background: var(--border-default);
     position: relative;
-    opacity: 0.6;
+    opacity: 0.5;
 }
 
 .flow-line::after {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: -4px;
     left: 50%;
     transform: translateX(-50%);
-    border-left: 4px solid transparent;
-    border-right: 4px solid transparent;
-    border-top: 4px solid var(--border-subtle);
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid var(--border-default);
 }
 
 .flow-line--spread {
-    height: 16px;
+    height: 20px;
 }
 
 .flow-row {
     display: flex;
-    gap: 8px;
+    gap: 10px;
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
@@ -1342,18 +1370,18 @@ a.asset__item:hover {
 /* Steps List (Refined) */
 .ecosystem-steps {
     margin-top: auto;
-    background: var(--bg-secondary);
-    padding: 16px;
+    background: var(--bg-tertiary);
+    padding: 20px;
     border-radius: var(--radius-md);
     text-align: left;
-    border: 1px solid var(--border-subtle);
+    border: 1px solid rgba(0, 0, 0, 0.03);
 }
 
 .ecosystem-step {
     display: flex;
     gap: 12px;
-    margin-bottom: 12px;
-    font-size: 14px;
+    margin-bottom: 14px;
+    font-size: 13px;
     color: var(--text-secondary);
     line-height: 1.6;
 }
@@ -1364,8 +1392,8 @@ a.asset__item:hover {
 
 .ecosystem-step__num {
     flex-shrink: 0;
-    width: 20px;
-    height: 20px;
+    width: 22px;
+    height: 22px;
     background: var(--accent-gold);
     color: #fff;
     font-weight: 700;
@@ -1373,16 +1401,17 @@ a.asset__item:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 10px;
-    margin-top: 2px;
+    font-size: 11px;
+    margin-top: 0;
+    box-shadow: 0 2px 4px rgba(198, 164, 82, 0.3);
 }
 
 .ecosystem-card__desc {
-    margin-top: 16px;
+    margin-top: 20px;
     font-size: 13px;
     color: var(--text-muted);
-    line-height: 1.6;
-    padding: 0 8px;
+    line-height: 1.7;
+    padding: 0 4px;
 }
 
 /* ========== 7. Tech Stack ========== */
