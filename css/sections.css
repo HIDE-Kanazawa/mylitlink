@@ -543,7 +543,7 @@ a.media__item:hover {
 }
 
 .media__ai-cover {
-    background: linear-gradient(135deg, #00C6FF, #0072FF);
+    background-image: url('../assets/ai_blog_bg.webp');
 }
 
 .media__note-cover {
@@ -782,8 +782,7 @@ a.asset__box:hover .asset__newtab-icon {
 .asset__travel-cover {
     height: 100px;
     width: 100%;
-    background: linear-gradient(135deg, #9D50BB, #6E48AA);
-    /* Placeholder Gradient */
+    background-image: url('../assets/travel_log_bg.webp');
     background-size: cover;
     background-position: center;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
